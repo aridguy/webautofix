@@ -57,3 +57,8 @@
 } */
 
 /* Add styles as needed for your modal */
+
+
+@media (max-width: 767px) {
+  /* Your mobile-specific CSS styles here */
+}
